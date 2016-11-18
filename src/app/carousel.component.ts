@@ -1,10 +1,10 @@
-//Import Component form the angular core package
-import {Component} from 'angular2/core';
+// Import Component form the angular core package
+import {Component} from '@angular/core';
 
-//Importt the Image interface
+// Import the Image interface
 import {Image} from './image.interface';
 
-//Compoent Decorator
+// Compoent Decorator
 @Component({
   //Name of our tag
   selector: 'css-carousel',
@@ -14,12 +14,11 @@ import {Image} from './image.interface';
 
   <ul class="slides">
 
-    <li *ngFor="#image of images">
+    <li *ngFor="let image of images">
       <h2>{{image.title}}</h2>
       <img src="{{image.url}}" alt="">
     </li>
 
-   
   </ul>
 
 </div>
@@ -88,14 +87,14 @@ import {Image} from './image.interface';
 //Carousel Component itself
 export class CSSCarouselComponent {
     //images data to be bound to the template
-	public images = IMAGES;
+  public images = IMAGES;
 }
 
 //IMAGES array implementing Image interface
 var IMAGES: Image[] = [
-	{ "title": "We are covered", "url": "images/covered.jpg" },
-	{ "title": "Generation Gap", "url": "images/generation.jpg" },
-	{ "title": "Potter Me", "url": "images/potter.jpg" },
-	{ "title": "Pre-School Kids", "url": "images/preschool.jpg" },
-	{ "title": "Young Peter Cech", "url": "images/soccer.jpg" }	
+  { "title": "We are covered", "url": "images/covered.jpg" },
+  { "title": "Generation Gap", "url": "images/generation.jpg" },
+  { "title": "Potter Me", "url": "images/potter.jpg" },
+  { "title": "Pre-School Kids", "url": "images/preschool.jpg" },
+  { "title": "Young Peter Cech", "url": "images/soccer.jpg" }
 ];
